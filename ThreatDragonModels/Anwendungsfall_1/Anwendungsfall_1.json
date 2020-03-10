@@ -1022,6 +1022,27 @@
               "id": "c8625c2f-e169-4fa1-94e8-55f99d653572",
               "z": 10,
               "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 454,
+                "y": 110
+              },
+              "target": {
+                "x": 270,
+                "y": 331
+              },
+              "vertices": [
+                {
+                  "x": 539,
+                  "y": 305
+                }
+              ],
+              "id": "41acaea6-0d00-401e-b9c7-b33afad41bc7",
+              "z": 11,
+              "attrs": {}
             }
           ]
         },
