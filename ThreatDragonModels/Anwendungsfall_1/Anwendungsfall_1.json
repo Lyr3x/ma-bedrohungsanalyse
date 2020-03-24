@@ -575,8 +575,8 @@
                 "height": 80
               },
               "position": {
-                "x": 701,
-                "y": 419
+                "x": 706,
+                "y": 418
               },
               "angle": 0,
               "id": "498b11fb-7a72-43ae-8ba7-14f7f500c542",
@@ -588,31 +588,34 @@
                   "title": "Generic tampering threat",
                   "type": "Tampering",
                   "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
+                  "severity": "High",
+                  "description": "A generic tampering threat",
+                  "mitigation": "Rechtemodell"
                 },
                 {
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
                   "title": "Generic repudiation threat",
                   "type": "Repudiation",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "A generic repudiation threat"
+                  "description": "A generic repudiation threat",
+                  "mitigation": "Logging"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
                   "title": "Generic informtion disclosure threat",
                   "type": "Information disclosure",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "A generic information disclosure threat"
+                  "description": "A generic information disclosure threat",
+                  "mitigation": "Verschlüsselung"
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
                   "title": "Generic DoS threat",
                   "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
+                  "status": "Mitigated",
+                  "severity": "Low",
                   "description": "A generic DoS threat",
                   "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich"
                 }
@@ -746,7 +749,7 @@
                 }
               ],
               "z": 5,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "threats": [
@@ -754,24 +757,26 @@
                   "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
                   "title": "Generic tampering threat",
                   "type": "Tampering",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "A generic tampering threat"
+                  "description": "A generic tampering threat",
+                  "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
                   "title": "Generic informtion disclosure threat",
                   "type": "Information disclosure",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "A generic information disclosure threat"
+                  "description": "A generic information disclosure threat",
+                  "mitigation": "Nicht öffentlich erreichbar"
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
                   "title": "Generic DoS threat",
                   "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
+                  "status": "Mitigated",
+                  "severity": "Low",
                   "description": "A generic DoS threat",
                   "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich"
                 }
@@ -779,10 +784,10 @@
               "protocol": "TCP",
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
+                  "class": "marker-target hasNoOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             },
@@ -869,15 +874,10 @@
                 "y": 102
               },
               "target": {
-                "x": 970,
-                "y": 317
+                "x": 687,
+                "y": 584
               },
-              "vertices": [
-                {
-                  "x": 711,
-                  "y": 314
-                }
-              ],
+              "vertices": [],
               "id": "1fa88577-8534-45ab-9be7-d48400468ab1",
               "z": 8,
               "attrs": {}
@@ -901,27 +901,6 @@
               ],
               "id": "6e8ef9fc-0743-48e2-bc6f-593b43d80fa0",
               "z": 9,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 654,
-                "y": 550
-              },
-              "target": {
-                "x": 952,
-                "y": 439
-              },
-              "vertices": [
-                {
-                  "x": 725,
-                  "y": 376
-                }
-              ],
-              "id": "c8625c2f-e169-4fa1-94e8-55f99d653572",
-              "z": 10,
               "attrs": {}
             },
             {
