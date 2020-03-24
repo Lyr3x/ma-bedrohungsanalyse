@@ -894,7 +894,7 @@
               ],
               "isPublicNetwork": true,
               "isEncrypted": true,
-              "protocol": "HTTP",
+              "protocol": "HTTPS",
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasOpenThreats isInScope"
@@ -1015,7 +1015,7 @@
               "hasOpenThreats": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
-              "protocol": "HTTP",
+              "protocol": "HTTPS",
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
