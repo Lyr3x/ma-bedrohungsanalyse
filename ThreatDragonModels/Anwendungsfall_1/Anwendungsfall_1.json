@@ -613,7 +613,8 @@
                   "type": "Denial of service",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "A generic DoS threat"
+                  "description": "A generic DoS threat",
+                  "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich"
                 }
               ],
               "attrs": {
@@ -771,7 +772,8 @@
                   "type": "Denial of service",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "A generic DoS threat"
+                  "description": "A generic DoS threat",
+                  "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich"
                 }
               ],
               "protocol": "TCP",
