@@ -799,6 +799,10 @@
                 {
                   "x": 588,
                   "y": 359
+                },
+                {
+                  "x": 668,
+                  "y": 319
                 }
               ],
               "id": "f2117c71-61b0-47ae-b25b-c3ba22214978",
@@ -950,11 +954,19 @@
               "target": {
                 "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 601,
+                  "y": 227
+                }
+              ],
               "id": "8c4bac97-818d-49b2-a5ea-ab7de903ae63",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.4901120800383844,
+                    "offset": -1.598290349011587
+                  },
                   "attrs": {
                     "text": {
                       "text": "Request",
@@ -965,6 +977,48 @@
                 }
               ],
               "z": 12,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
+              },
+              "target": {
+                "id": "47307a23-01e0-4c89-8543-990ede092754"
+              },
+              "vertices": [
+                {
+                  "x": 607,
+                  "y": 278
+                }
+              ],
+              "id": "992af043-e978-42cf-b613-0b19c5f884a5",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
               "hasOpenThreats": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
