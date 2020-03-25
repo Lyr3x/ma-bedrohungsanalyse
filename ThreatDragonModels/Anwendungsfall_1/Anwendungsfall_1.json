@@ -853,7 +853,8 @@
                   "type": "Denial of service",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "A generic DoS threat"
+                  "description": "A generic DoS threat",
+                  "mitigation": "Rate Limit"
                 }
               ],
               "isPublicNetwork": true,
