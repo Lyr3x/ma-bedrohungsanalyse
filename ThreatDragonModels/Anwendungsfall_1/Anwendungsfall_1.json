@@ -559,11 +559,12 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
-                  "type": "Elevation of privilege",
+                  "severity": "High",
+                  "type": "Spoofing",
                   "description": "Erlangung von Zugangsdaten",
                   "title": "Zugangsdaten veröffentlicht",
-                  "$$hashKey": "object:159"
+                  "$$hashKey": "object:159",
+                  "mitigation": "Kurzlebige Zugangsdaten\nAuditierung\nSchnelles Rotierungssystem"
                 }
               ],
               "attrs": {
@@ -714,14 +715,25 @@
                   "status": "Mitigated",
                   "severity": "Medium",
                   "description": "Nicht Anerkennung von vorgenommenen Änderungen.",
-                  "mitigation": "Aktivierung des Audit-Logs und Erhebung von Telemetrie-Daten"
+                  "mitigation": "Aktivierung des Audit-Logs und Erhebung von Telemetrie-Daten",
+                  "$$hashKey": "object:328"
                 },
                 {
                   "status": "Open",
                   "severity": "High",
                   "type": "Denial of service",
                   "title": "(D)DoS",
-                  "description": "Angriff auf die Verfügbarkeit des Systems. Insbesondere ein Administrator hat die Möglichkeit die betriebenen Dienste zu stören."
+                  "description": "Angriff auf die Verfügbarkeit des Systems. Insbesondere ein Administrator hat die Möglichkeit die betriebenen Dienste zu stören.",
+                  "$$hashKey": "object:329"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "title": "Spoofing",
+                  "description": "Unberechtige erlangen Zugriff auf Zugangsdaten",
+                  "mitigation": "Nutzung von Administrator-Token (nicht Root-Token). Ermöglicht schnelles Handeln.",
+                  "$$hashKey": "object:336"
                 }
               ],
               "attrs": {
@@ -872,7 +884,7 @@
                   "severity": "High",
                   "description": "A generic information disclosure threat",
                   "mitigation": "Verschlüsselung",
-                  "$$hashKey": "object:106"
+                  "$$hashKey": "object:304"
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
