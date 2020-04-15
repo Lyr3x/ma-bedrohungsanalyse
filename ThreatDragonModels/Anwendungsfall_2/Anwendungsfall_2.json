@@ -1,13 +1,13 @@
 {
   "summary": {
-    "title": "Anwendungsfall_1",
+    "title": "Anwendungsfall_2",
     "owner": "Kai Bepperling"
   },
   "detail": {
     "contributors": [],
     "diagrams": [
       {
-        "title": "Anwendungsfall_1_complete",
+        "title": "Anwendungsfall_2_complete",
         "thumbnail": "./public/content/images/thumbnail.jpg",
         "id": 0,
         "diagramJson": {
@@ -537,7 +537,7 @@
         "$$hashKey": "object:11"
       },
       {
-        "title": "Anwendungsfall_1",
+        "title": "Anwendungsfall_2",
         "thumbnail": "./public/content/images/thumbnail.jpg",
         "id": 1,
         "diagramJson": {
@@ -549,33 +549,51 @@
                 "height": 100
               },
               "position": {
-                "x": 733,
+                "x": 739,
                 "y": 203
               },
               "angle": 0,
               "id": "96dde770-c128-4a0b-a6f0-8bfabda481de",
               "z": 1,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
-                  "type": "Spoofing",
+                  "type": "Information disclosure",
                   "description": "Erlangung von Zugangsdaten",
                   "title": "Zugangsdaten veröffentlicht",
                   "$$hashKey": "object:159",
-                  "mitigation": "Kurzlebige Zugangsdaten\nAuditierung\nSchnelles Rotierungssystem"
+                  "mitigation": "Kurzlebige Zugangsdaten\nAuditierung\nSchnelles Rotierungssystem\nKein Abrufen von klartexten möglich"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "title": "Manipulation von Daten",
+                  "description": "Unerlaubtes Verändern von Daten",
+                  "mitigation": "Authentifizierung",
+                  "$$hashKey": "object:170"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "title": "Erweiterung der Rechte",
+                  "description": "Angreifer kann die Rechte erweitern",
+                  "mitigation": "JWT-Token - Rolle und Validität wird bei jeder Anfrage überprüft",
+                  "$$hashKey": "object:188"
                 }
               ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
+                  "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Produkt-Micros\nervice"
                 },
                 ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
+                  "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
             },
@@ -586,7 +604,7 @@
                 "height": 80
               },
               "position": {
-                "x": 703,
+                "x": 711,
                 "y": 417
               },
               "angle": 0,
@@ -660,36 +678,40 @@
               "angle": 0,
               "id": "47307a23-01e0-4c89-8543-990ede092754",
               "z": 3,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
                   "title": "Generic spoofing threat",
                   "type": "Spoofing",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "A generic spoofing threat"
+                  "description": "A generic spoofing threat",
+                  "$$hashKey": "object:141",
+                  "mitigation": "Rollenbasierte Authentifizierungesmechanismen verhindern unerlaubte Manipluation"
                 },
                 {
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
                   "title": "Generic repudiation threat",
                   "type": "Repudiation",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "A generic repudiation threat"
+                  "description": "A generic repudiation threat",
+                  "$$hashKey": "object:147",
+                  "mitigation": "Logging von Aktivitäten"
                 }
               ],
-              "outOfScope": true,
+              "outOfScope": false,
               "reasonOutOfScope": "Keine Kontrolle über Nutzerverhalten. Regelung der Berechtigung über API-Token",
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasOpenThreats isOutOfScope"
+                  "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Nutzer"
                 },
                 ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
+                  "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
             },
@@ -706,7 +728,7 @@
               "angle": 0,
               "id": "d7e40a86-7f00-42e4-8d3b-fc96edb446f3",
               "z": 4,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
@@ -719,12 +741,13 @@
                   "$$hashKey": "object:328"
                 },
                 {
-                  "status": "Open",
-                  "severity": "High",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Denial of service",
                   "title": "(D)DoS",
                   "description": "Angriff auf die Verfügbarkeit des Systems. Insbesondere ein Administrator hat die Möglichkeit die betriebenen Dienste zu stören.",
-                  "$$hashKey": "object:329"
+                  "$$hashKey": "object:329",
+                  "mitigation": "Rate Limiting im Router\n\nIn Produktion:\n* Skalierung"
                 },
                 {
                   "status": "Mitigated",
@@ -733,18 +756,18 @@
                   "title": "Spoofing",
                   "description": "Unberechtige erlangen Zugriff auf Zugangsdaten",
                   "mitigation": "Nutzung von Administrator-Token (nicht Root-Token). Ermöglicht schnelles Handeln.",
-                  "$$hashKey": "object:336"
+                  "$$hashKey": "object:204"
                 }
               ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
+                  "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Administrator"
                 },
                 ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
+                  "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
             },
@@ -779,7 +802,7 @@
                 }
               ],
               "z": 5,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "threats": [
@@ -787,10 +810,10 @@
                   "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
                   "title": "Generic tampering threat",
                   "type": "Elevation of privilege",
-                  "status": "Open",
-                  "severity": "Medium",
+                  "status": "Mitigated",
+                  "severity": "High",
                   "description": "Erlangung von Zugangsberechtigung",
-                  "mitigation": "",
+                  "mitigation": "Zugang wird über Vault erteilt.\nBerechtigung anhand von fest definierten Policies",
                   "$$hashKey": "object:141"
                 },
                 {
@@ -817,10 +840,10 @@
               "protocol": "TCP",
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
+                  "class": "marker-target hasNoOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             },
@@ -1130,12 +1153,253 @@
                   "class": "connection hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 1019,
+                "y": 200
+              },
+              "angle": 0,
+              "id": "67d53a76-c233-47f5-91af-1231212fded6",
+              "z": 14,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "Vertrautes Secrets-Management-System",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "Vault"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 993,
+                "y": 416
+              },
+              "angle": 0,
+              "id": "c2f5268e-30ee-43e9-8dde-fade9056436a",
+              "z": 15,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "Vertrauter Speicher",
+              "isALog": true,
+              "storesCredentials": true,
+              "isEncrypted": true,
+              "isSigned": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "Integrated Storage"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
+              },
+              "target": {
+                "id": "67d53a76-c233-47f5-91af-1231212fded6"
+              },
+              "vertices": [
+                {
+                  "x": 927,
+                  "y": 216
+                }
+              ],
+              "id": "02701844-8097-4204-bd29-4a09b0986c57",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.47606672427658187,
+                    "offset": -15.062109893406017
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "flow 13",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 16,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "67d53a76-c233-47f5-91af-1231212fded6"
+              },
+              "target": {
+                "id": "c2f5268e-30ee-43e9-8dde-fade9056436a"
+              },
+              "vertices": [],
+              "id": "0602a280-9c4c-4391-b8b0-69401311718b",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 14",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 17,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "67d53a76-c233-47f5-91af-1231212fded6"
+              },
+              "target": {
+                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
+              },
+              "vertices": [
+                {
+                  "x": 923,
+                  "y": 269
+                }
+              ],
+              "id": "c1f866d8-22ac-4acc-ac67-a3cd326dd69a",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5100075565507225,
+                    "offset": -14.070603673871172
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "flow 15",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 18,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "67d53a76-c233-47f5-91af-1231212fded6"
+              },
+              "target": {
+                "id": "498b11fb-7a72-43ae-8ba7-14f7f500c542"
+              },
+              "vertices": [
+                {
+                  "x": 962,
+                  "y": 341
+                },
+                {
+                  "x": 941,
+                  "y": 404
+                },
+                {
+                  "x": 916,
+                  "y": 447
+                }
+              ],
+              "id": "ec93a62c-7073-4d33-8366-346a84c17686",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 16",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 19,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
         "size": {
           "height": 5536,
-          "width": 1116
+          "width": 1491
         },
         "$$hashKey": "object:12"
       }
