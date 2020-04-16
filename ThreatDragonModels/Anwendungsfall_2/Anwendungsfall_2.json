@@ -1,10 +1,16 @@
 {
   "summary": {
     "title": "anwendungsfall_2",
-    "owner": "Kai Bepperling"
+    "owner": "Kai Bepperling",
+    "description": "Systemerweiterung des ersten Anwendungsfall:\n* Einführung von Benutzerrollen\n* Einführung von Benutzerauthentifizierung"
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Kai Bepperling",
+        "$$hashKey": "object:419"
+      }
+    ],
     "diagrams": [
       {
         "title": "Anwendungsfall_2",
