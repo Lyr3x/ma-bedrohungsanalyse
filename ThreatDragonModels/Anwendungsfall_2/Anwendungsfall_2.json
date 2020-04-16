@@ -278,32 +278,32 @@
               "threats": [
                 {
                   "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
+                  "title": "Ausdehnen der Brechtigungen",
                   "type": "Elevation of privilege",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "description": "Erlangung von Zugangsberechtigung",
-                  "mitigation": "Kurzlebige Zugangsdaten\nAuditierung",
+                  "mitigation": "* Kurzlebige Zugangsdaten\n* Validierung der Anfrage",
                   "$$hashKey": "object:141"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
+                  "title": "Preisgeben von Informationen",
                   "type": "Information disclosure",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "description": "A generic information disclosure threat",
-                  "mitigation": "Nicht öffentlich erreichbar",
+                  "mitigation": "Netzwerkisolation",
                   "$$hashKey": "object:142"
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
+                  "title": "Verfügbarkeit",
                   "type": "Denial of service",
                   "status": "Mitigated",
                   "severity": "Low",
-                  "description": "A generic DoS threat",
-                  "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich",
+                  "description": "Angriff auf die Verfügbarkeit der Datenbank",
+                  "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich\nNetzwerkisolation",
                   "$$hashKey": "object:143"
                 }
               ],
@@ -449,10 +449,10 @@
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "title": "Information disclosure",
+                  "title": "Presigeben von Informationen",
                   "description": "Unbeabsichtigte veröffentlichung von Informationen",
-                  "mitigation": "Verschlüsselung",
-                  "$$hashKey": "object:79"
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
+                  "$$hashKey": "object:928"
                 },
                 {
                   "status": "Mitigated",
@@ -460,8 +460,8 @@
                   "type": "Tampering",
                   "title": "Manipulation",
                   "description": "Manipulation der übertragenen Informationen",
-                  "mitigation": "Verschlüsselung",
-                  "$$hashKey": "object:89"
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
+                  "$$hashKey": "object:922"
                 }
               ],
               "attrs": {
@@ -515,9 +515,9 @@
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "title": "Information disclosure",
+                  "title": "Preisgeben von Informationen",
                   "description": "Unbeabsichtigte veröffentlichung von Informationen",
-                  "mitigation": "Verschlüsselung",
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
                   "$$hashKey": "object:51"
                 },
                 {
@@ -526,7 +526,7 @@
                   "type": "Tampering",
                   "description": "Manipulation der übertragenen Informationen",
                   "title": "Manipulation",
-                  "mitigation": "Verschlüsselung",
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
                   "$$hashKey": "object:96"
                 }
               ],
@@ -740,7 +740,7 @@
                   "status": "Mitigated",
                   "severity": "Medium",
                   "description": "Manipulation der Anfrage",
-                  "mitigation": "* Signatur/MAC\n* Durch Vault Threat Model behandelt",
+                  "mitigation": "* Signatur/MAC\n* Durch Vault Threat Model behandelt\n* Verschlüsselung/Signatur (TLS)",
                   "$$hashKey": "object:662"
                 },
                 {
@@ -750,7 +750,7 @@
                   "status": "Mitigated",
                   "severity": "Medium",
                   "description": "Preisgeben von Informationen an Dritte",
-                  "mitigation": "* Rollen-basierte / Policy-basiert Authentfizierung",
+                  "mitigation": "* Rollen-basierte / Policy-basiert Authentfizierung\n* Verschlüsselung/Signatur (TLS)",
                   "$$hashKey": "object:879"
                 },
                 {
