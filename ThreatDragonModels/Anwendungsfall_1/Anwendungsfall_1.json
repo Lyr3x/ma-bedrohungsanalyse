@@ -65,8 +65,8 @@
                 "height": 80
               },
               "position": {
-                "x": 703,
-                "y": 417
+                "x": 708,
+                "y": 418
               },
               "angle": 0,
               "id": "498b11fb-7a72-43ae-8ba7-14f7f500c542",
@@ -186,52 +186,6 @@
               }
             },
             {
-              "type": "tm.Actor",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 319,
-                "y": 424
-              },
-              "angle": 0,
-              "id": "d7e40a86-7f00-42e4-8d3b-fc96edb446f3",
-              "z": 4,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Zurückweisung",
-                  "type": "Repudiation",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "Nicht Anerkennung von vorgenommenen Änderungen.",
-                  "mitigation": "Aktivierung des Audit-Logs und Erhebung von Telemetrie-Daten",
-                  "$$hashKey": "object:328"
-                },
-                {
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Denial of service",
-                  "title": "(D)DoS",
-                  "description": "Angriff auf die Verfügbarkeit des Systems. Insbesondere ein Administrator hat die Möglichkeit die betriebenen Dienste zu stören.",
-                  "$$hashKey": "object:950"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Administrator"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Flow",
               "size": {
                 "width": 10,
@@ -308,91 +262,6 @@
               }
             },
             {
-              "type": "tm.Flow",
-              "size": {
-                "width": 10,
-                "height": 10
-              },
-              "smooth": true,
-              "source": {
-                "id": "d7e40a86-7f00-42e4-8d3b-fc96edb446f3"
-              },
-              "target": {
-                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
-              },
-              "vertices": [
-                {
-                  "x": 588,
-                  "y": 359
-                },
-                {
-                  "x": 668,
-                  "y": 319
-                }
-              ],
-              "id": "f2117c71-61b0-47ae-b25b-c3ba22214978",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.5314861873116518,
-                    "offset": -2.7090933274804976
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "DB Zugangsdaten",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 6,
-              "hasOpenThreats": false,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "description": "A generic tampering threat",
-                  "mitigation": "Verschlüsselung",
-                  "$$hashKey": "object:105"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "description": "A generic information disclosure threat",
-                  "mitigation": "Verschlüsselung",
-                  "$$hashKey": "object:304"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat",
-                  "mitigation": "Rate Limiting im Router (Traefik)",
-                  "$$hashKey": "object:107"
-                }
-              ],
-              "isPublicNetwork": true,
-              "isEncrypted": true,
-              "protocol": "HTTPS",
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Boundary",
               "size": {
                 "width": 10,
@@ -410,35 +279,6 @@
               "vertices": [],
               "id": "1fa88577-8534-45ab-9be7-d48400468ab1",
               "z": 8,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Boundary",
-              "size": {
-                "width": 10,
-                "height": 10
-              },
-              "smooth": true,
-              "source": {
-                "x": 310,
-                "y": 396
-              },
-              "target": {
-                "x": 508,
-                "y": 536
-              },
-              "vertices": [
-                {
-                  "x": 464,
-                  "y": 397
-                },
-                {
-                  "x": 506,
-                  "y": 421
-                }
-              ],
-              "id": "6e8ef9fc-0743-48e2-bc6f-593b43d80fa0",
-              "z": 9,
               "attrs": {}
             },
             {
@@ -686,6 +526,68 @@
               "id": "a3d112f9-6c74-4bda-91e2-0708660397de",
               "z": 16,
               "hasOpenThreats": false,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Manipulation Der Kommunikation",
+                  "type": "Spoofing",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Vortäuschen einer anderen Identität",
+                  "$$hashKey": "object:162",
+                  "mitigation": "Authentifizierung"
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Manipulation von Daten",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Manipulation von Daten",
+                  "$$hashKey": "object:171",
+                  "mitigation": "Authentifizierung\nEingeschränkte Rechte\nSignierung\nVerschlüsselung"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Zurückweisung",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Zurückweisung von Aktivitäten",
+                  "$$hashKey": "object:180",
+                  "mitigation": "Vault Audit Log"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Preisgeben von Informationen",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Preisgeben von Informationen",
+                  "$$hashKey": "object:189",
+                  "mitigation": "Ablegen von Informationen in verschlüsselte Ramdisk oder keine Persisitierung\nIsolierung"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Verfügbarkeit",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Verfügbarkeit der Systeme",
+                  "$$hashKey": "object:198",
+                  "mitigation": "Rate Limiting im Router (Traefik)"
+                },
+                {
+                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
+                  "title": "Ausdehnung der Berechtigungen",
+                  "type": "Elevation of privilege",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Ausdehnung der Berechtigungen",
+                  "$$hashKey": "object:207",
+                  "mitigation": "Feste Role-ID mit dynamischer Secret-ID\nRollen-Basierte bzw. Policy-Basierte Authentifizerung"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -1175,165 +1077,39 @@
         "diagramJson": {
           "cells": [
             {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "size": {
-                "width": 160,
-                "height": 80
+                "width": 100,
+                "height": 100
               },
               "position": {
-                "x": 108,
-                "y": 239
+                "x": 737,
+                "y": 203
               },
               "angle": 0,
-              "id": "e1a37202-3a68-43a2-9da5-122ff2bbdc7f",
+              "id": "96dde770-c128-4a0b-a6f0-8bfabda481de",
               "z": 1,
               "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Administrator"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 517,
-                "y": 469
-              },
-              "angle": 0,
-              "id": "afcee5ea-cbe5-4792-8f9a-d722debbb154",
-              "z": 2,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Database"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 643,
-                "y": 124
-              },
-              "angle": 0,
-              "id": "83749cd5-884c-4087-a909-dd2a596e8e5a",
-              "z": 3,
-              "hasOpenThreats": false,
-              "isALog": true,
-              "storesCredentials": true,
-              "isEncrypted": true,
-              "outOfScope": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Vault-Backend"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 423,
-                "y": 111
-              },
-              "angle": 0,
-              "id": "e0f8683f-52d1-40d9-a0d9-17be4daa5048",
-              "z": 4,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Vault"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "e0f8683f-52d1-40d9-a0d9-17be4daa5048"
-              },
-              "target": {
-                "id": "83749cd5-884c-4087-a909-dd2a596e8e5a"
-              },
-              "vertices": [],
-              "id": "f9a18d51-a6c4-41d4-b904-9c00149a3f07",
-              "labels": [
+              "threats": [
                 {
-                  "position": {
-                    "distance": 0.45287820500799164,
-                    "offset": -17.410691205551025
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "Persistierung",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Erlangung von DB Zugangsdaten",
+                  "title": "Zugangsdaten veröffentlicht",
+                  "$$hashKey": "object:159",
+                  "mitigation": "Kurzlebige Zugangsdaten\nAuditierung\nSchnelles Rotierungssystem"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Auslesen von Secrets",
+                  "description": "Unbeabsichtigtes auslesen von abgerufenen Secrets (z.B. Vault access token, Role-ID, Secret-ID)",
+                  "mitigation": "Ablegen der Secrets in Ramdisk\nLöschen der Secret-ID nach Lesevorgang\nEndpunkte nicht dynamisieren",
+                  "$$hashKey": "object:542"
                 }
               ],
-              "z": 5,
-              "hasOpenThreats": false,
-              "isEncrypted": true,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 680,
-                "y": 293
-              },
-              "angle": 0,
-              "id": "670251ff-8ccc-49d8-9f7a-c3f37ac69633",
-              "z": 6,
-              "hasOpenThreats": false,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -1347,25 +1123,67 @@
               }
             },
             {
-              "type": "tm.Process",
+              "type": "tm.Store",
               "size": {
-                "width": 100,
-                "height": 100
+                "width": 160,
+                "height": 80
               },
               "position": {
-                "x": 426,
-                "y": 296
+                "x": 708,
+                "y": 418
               },
               "angle": 0,
-              "id": "a6a3700c-2d66-438a-9a8d-463796e37426",
-              "z": 7,
+              "id": "498b11fb-7a72-43ae-8ba7-14f7f500c542",
+              "z": 2,
               "hasOpenThreats": false,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "A generic tampering threat",
+                  "mitigation": "Rechtemodell und Verschlüsselung der gespeicherten Daten",
+                  "$$hashKey": "object:122"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "A generic repudiation threat",
+                  "mitigation": "Logging",
+                  "$$hashKey": "object:123"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "A generic information disclosure threat",
+                  "mitigation": "Verschlüsselung",
+                  "$$hashKey": "object:124"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "description": "A generic DoS threat",
+                  "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich",
+                  "$$hashKey": "object:125"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "Vault-Agent"
+                  "text": "Datenbank"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -1373,202 +1191,218 @@
               }
             },
             {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 319,
+                "y": 220
+              },
+              "angle": 0,
+              "id": "47307a23-01e0-4c89-8543-990ede092754",
+              "z": 3,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Generic spoofing threat",
+                  "type": "Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic spoofing threat",
+                  "mitigation": "Authentication",
+                  "$$hashKey": "object:942"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Zurückweisung",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "description": "Zurückweisung von Aktivitäten",
+                  "$$hashKey": "object:562",
+                  "mitigation": "Logging"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "title": "(D)Dos",
+                  "description": "Einschränkung der Verfügbarkeit des Systems",
+                  "mitigation": "Rate Limiting im Router\n(In Produktion: Skalierbarkeit des Dienstes)",
+                  "$$hashKey": "object:579"
+                }
+              ],
+              "outOfScope": false,
+              "reasonOutOfScope": "Keine Kontrolle über Nutzerverhalten. Regelung der Berechtigung über API-Token",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Nutzer"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
-                "id": "a6a3700c-2d66-438a-9a8d-463796e37426"
+                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
               },
               "target": {
-                "id": "670251ff-8ccc-49d8-9f7a-c3f37ac69633"
+                "id": "498b11fb-7a72-43ae-8ba7-14f7f500c542"
               },
               "vertices": [],
-              "id": "2c6de6ec-cfd1-4860-817e-6a0a94bee916",
+              "id": "53aedd62-960a-4a15-9ae4-19bc8e856331",
               "labels": [
                 {
                   "position": {
-                    "distance": 0.5000010078093107,
-                    "offset": -14.513308921726328
+                    "distance": 0.4588182669976478,
+                    "offset": -3.584953778299031
                   },
                   "attrs": {
                     "text": {
-                      "text": "Zugangsdaten",
+                      "text": "Persistierung",
                       "font-weight": "400",
                       "font-size": "small"
                     }
                   }
                 }
               ],
+              "z": 5,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Elevation of privilege",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Erlangung von Zugangsberechtigung",
+                  "mitigation": "Kurzlebige Zugangsdaten\nAuditierung",
+                  "$$hashKey": "object:141"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "A generic information disclosure threat",
+                  "mitigation": "Nicht öffentlich erreichbar",
+                  "$$hashKey": "object:142"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "description": "A generic DoS threat",
+                  "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich",
+                  "$$hashKey": "object:143"
+                }
+              ],
+              "protocol": "TCP",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 688,
+                "y": 145
+              },
+              "target": {
+                "x": 689,
+                "y": 546
+              },
+              "vertices": [],
+              "id": "1fa88577-8534-45ab-9be7-d48400468ab1",
               "z": 8,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
+              "attrs": {}
             },
             {
-              "type": "tm.Flow",
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
-                "id": "670251ff-8ccc-49d8-9f7a-c3f37ac69633"
+                "x": 510,
+                "y": 149
               },
               "target": {
-                "id": "afcee5ea-cbe5-4792-8f9a-d722debbb154"
+                "x": 312,
+                "y": 332
               },
               "vertices": [
                 {
-                  "x": 619,
-                  "y": 402
-                }
-              ],
-              "id": "a4aef648-43fb-4137-87d4-d39b6a11798c",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.3881557381280843,
-                    "offset": -30.470955664883252
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "Schreiben",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 9,
-              "hasOpenThreats": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "x": 510,
+                  "y": 303
                 },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "x": 678,
-                "y": 512
-              },
-              "target": {
-                "id": "670251ff-8ccc-49d8-9f7a-c3f37ac69633"
-              },
-              "vertices": [
                 {
-                  "x": 726,
-                  "y": 493
+                  "x": 471,
+                  "y": 331
                 }
               ],
-              "id": "5d1d5cc2-b179-4039-b238-71d5ca3f1c44",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.6682468359072538,
-                    "offset": 22.328259017987634
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "Lesen",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 10,
-              "hasOpenThreats": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "a6a3700c-2d66-438a-9a8d-463796e37426"
-              },
-              "target": {
-                "id": "e0f8683f-52d1-40d9-a0d9-17be4daa5048"
-              },
-              "vertices": [
-                {
-                  "x": 438,
-                  "y": 261
-                }
-              ],
-              "id": "c51864bb-6250-4fb6-9f0c-4977341536ed",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.42383500782030353,
-                    "offset": -50.080256518501535
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "AppRole Auth",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
+              "id": "41acaea6-0d00-401e-b9c7-b33afad41bc7",
               "z": 11,
-              "hasOpenThreats": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "HTTPS",
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
+              "attrs": {}
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
-                "id": "e0f8683f-52d1-40d9-a0d9-17be4daa5048"
+                "id": "47307a23-01e0-4c89-8543-990ede092754"
               },
               "target": {
-                "x": 493,
-                "y": 298
+                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
               },
               "vertices": [
                 {
-                  "x": 512,
-                  "y": 257
+                  "x": 601,
+                  "y": 227
                 }
               ],
-              "id": "950d6422-6935-455a-952d-86e7ee1c1324",
+              "id": "8c4bac97-818d-49b2-a5ea-ab7de903ae63",
               "labels": [
                 {
                   "position": {
-                    "distance": 0.5228491459868267,
-                    "offset": -64
+                    "distance": 0.4901120800383844,
+                    "offset": -1.598290349011587
                   },
                   "attrs": {
                     "text": {
-                      "text": "DB Zugangsdaten",
+                      "text": "Request",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -1579,6 +1413,36 @@
               "hasOpenThreats": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "title": "DoS",
+                  "description": "Einschränkung der Dienstverfügbarkeit",
+                  "mitigation": "Einrichtung von Rate Limiting im Router (Traefik)",
+                  "$$hashKey": "object:717"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Information disclosure",
+                  "description": "Unbeabsichtigte veröffentlichung von Informationen",
+                  "mitigation": "Verschlüsselung",
+                  "$$hashKey": "object:79"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "title": "Manipulation",
+                  "description": "Manipulation der übertragenen Informationen",
+                  "mitigation": "Verschlüsselung",
+                  "$$hashKey": "object:89"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
@@ -1590,37 +1454,30 @@
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
-                "id": "e0f8683f-52d1-40d9-a0d9-17be4daa5048"
+                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
               },
               "target": {
-                "id": "670251ff-8ccc-49d8-9f7a-c3f37ac69633"
+                "id": "47307a23-01e0-4c89-8543-990ede092754"
               },
               "vertices": [
                 {
-                  "x": 601,
-                  "y": 212
-                },
-                {
-                  "x": 687,
-                  "y": 224
-                },
-                {
-                  "x": 726,
-                  "y": 259
+                  "x": 607,
+                  "y": 278
                 }
               ],
-              "id": "33449ae5-678a-4a63-a1a9-32ddad275721",
+              "id": "992af043-e978-42cf-b613-0b19c5f884a5",
               "labels": [
                 {
-                  "position": {
-                    "distance": 0.8637474928519403,
-                    "offset": -33.89560242647491
-                  },
+                  "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "DB Rolle",
+                      "text": "Response",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -1631,6 +1488,27 @@
               "hasOpenThreats": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Information disclosure",
+                  "description": "Unbeabsichtigte veröffentlichung von Informationen",
+                  "mitigation": "Verschlüsselung",
+                  "$$hashKey": "object:51"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Manipulation der übertragenen Informationen",
+                  "title": "Manipulation",
+                  "mitigation": "Verschlüsselung",
+                  "$$hashKey": "object:96"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
@@ -1641,60 +1519,618 @@
               }
             },
             {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 284,
-                "y": 112
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
               },
-              "target": {
-                "x": 942,
-                "y": 112
+              "position": {
+                "x": 1122,
+                "y": 200
               },
-              "vertices": [
-                {
-                  "x": 391,
-                  "y": 228
-                },
-                {
-                  "x": 844,
-                  "y": 220
-                }
-              ],
-              "id": "b336aeef-8cc4-4320-a926-fcd0092a09f2",
+              "angle": 0,
+              "id": "af108df3-e7e0-41bc-bb82-2d2214d3ed95",
               "z": 14,
-              "attrs": {}
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "Vault"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
             },
             {
-              "type": "tm.Boundary",
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 1094,
+                "y": 408
+              },
+              "angle": 0,
+              "id": "838fea8f-5b00-4934-8530-857ee8c81861",
+              "z": 15,
+              "hasOpenThreats": false,
+              "isALog": true,
+              "storesCredentials": true,
+              "isEncrypted": true,
+              "isSigned": true,
+              "outOfScope": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "Integrated Storage"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 931,
+                "y": 203
+              },
+              "angle": 0,
+              "id": "a3d112f9-6c74-4bda-91e2-0708660397de",
+              "z": 16,
+              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Manipulation Der Kommunikation",
+                  "type": "Spoofing",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Vortäuschen einer anderen Identität",
+                  "$$hashKey": "object:162",
+                  "mitigation": "Authentifizierung"
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Manipulation von Daten",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Manipulation von Daten",
+                  "$$hashKey": "object:171",
+                  "mitigation": "Authentifizierung\nEingeschränkte Rechte\nSignierung\nVerschlüsselung"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Zurückweisung",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Zurückweisung von Aktivitäten",
+                  "$$hashKey": "object:180",
+                  "mitigation": "Vault Audit Log"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Preisgeben von Informationen",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Preisgeben von Informationen",
+                  "$$hashKey": "object:189",
+                  "mitigation": "Ablegen von Informationen in verschlüsselte Ramdisk oder keine Persisitierung\nIsolierung"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Verfügbarkeit",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Verfügbarkeit der Systeme",
+                  "$$hashKey": "object:198",
+                  "mitigation": "Rate Limiting im Router (Traefik)"
+                },
+                {
+                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
+                  "title": "Ausdehnung der Berechtigungen",
+                  "type": "Elevation of privilege",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Ausdehnung der Berechtigungen",
+                  "$$hashKey": "object:207",
+                  "mitigation": "Feste Role-ID mit dynamischer Secret-ID\nRollen-Basierte bzw. Policy-Basierte Authentifizerung"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Vault Agent"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
-                "x": 315,
-                "y": 444
+                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
               },
               "target": {
-                "x": 954,
-                "y": 462
+                "id": "a3d112f9-6c74-4bda-91e2-0708660397de"
               },
               "vertices": [
                 {
-                  "x": 424,
-                  "y": 288
-                },
-                {
-                  "x": 846,
-                  "y": 306
+                  "x": 882,
+                  "y": 226
                 }
               ],
-              "id": "c1c328f9-2826-4438-bd1d-d27aff8d9d4f",
-              "z": 15,
-              "attrs": {}
+              "id": "c5dc0061-eb40-4dbd-8ce6-e5fff1515df3",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.47947174310684204,
+                    "offset": -1
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 17,
+              "hasOpenThreats": false,
+              "protocol": "HTTP",
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Manipulation",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Manipulation von übertragenen Daten",
+                  "$$hashKey": "object:616",
+                  "mitigation": "* Signatur/MAC\n* Durch Vault Threat Model behandelt"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Preisgeben von Informationen",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Preisgeben von Informationen an Dritte",
+                  "mitigation": "Isolation",
+                  "$$hashKey": "object:795"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "a3d112f9-6c74-4bda-91e2-0708660397de"
+              },
+              "target": {
+                "id": "af108df3-e7e0-41bc-bb82-2d2214d3ed95"
+              },
+              "vertices": [
+                {
+                  "x": 1079,
+                  "y": 229
+                }
+              ],
+              "id": "50a4ad68-30ca-448e-a392-e8092e272dd3",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.47248296393991335,
+                    "offset": -0.5546184186831865
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 18,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Manipulation",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Manipulation der Anfrage",
+                  "mitigation": "* Signatur/MAC\n* Durch Vault Threat Model behandelt",
+                  "$$hashKey": "object:662"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Preisgeben von Informationen",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Preisgeben von Informationen an Dritte",
+                  "mitigation": "* Rollen-basierte / Policy-basiert Authentfizierung",
+                  "$$hashKey": "object:879"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Verfügbarkeit",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Einschränkung der Verfügbarkeit",
+                  "mitigation": "Einrichtung von Rate Limiting im Router (Traefik)",
+                  "$$hashKey": "object:708"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "af108df3-e7e0-41bc-bb82-2d2214d3ed95"
+              },
+              "target": {
+                "id": "838fea8f-5b00-4934-8530-857ee8c81861"
+              },
+              "vertices": [
+                {
+                  "x": 1143,
+                  "y": 345
+                }
+              ],
+              "id": "e97ed971-9f64-4bdc-9e82-a2e446d090f0",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Write",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 19,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "838fea8f-5b00-4934-8530-857ee8c81861"
+              },
+              "target": {
+                "id": "af108df3-e7e0-41bc-bb82-2d2214d3ed95"
+              },
+              "vertices": [
+                {
+                  "x": 1204,
+                  "y": 347
+                }
+              ],
+              "id": "94de034f-0880-4f93-9ead-49da000cd1da",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Read",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 20,
+              "hasOpenThreats": false,
+              "protocol": "",
+              "isEncrypted": true,
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "af108df3-e7e0-41bc-bb82-2d2214d3ed95"
+              },
+              "target": {
+                "id": "498b11fb-7a72-43ae-8ba7-14f7f500c542"
+              },
+              "vertices": [
+                {
+                  "x": 1010,
+                  "y": 357
+                },
+                {
+                  "x": 936,
+                  "y": 430
+                }
+              ],
+              "id": "eda18abb-4cce-4dc1-8ae7-54a8159fb6c4",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Benutzer anlegen",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 21,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "TCP",
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Manipulation",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Manipulation der Übertragung",
+                  "mitigation": "TLS",
+                  "$$hashKey": "object:830"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Preisgeben von Informationen",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Preisgeben von Informationen an Dritte",
+                  "mitigation": "Verschlüsselung der Übertragung (TLS)",
+                  "$$hashKey": "object:839"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Verfügbarkeit",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Einschränkung der Verfügbarkeit",
+                  "mitigation": "Rate Limiting im Router (Traefik)",
+                  "$$hashKey": "object:848"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "a3d112f9-6c74-4bda-91e2-0708660397de"
+              },
+              "target": {
+                "id": "96dde770-c128-4a0b-a6f0-8bfabda481de"
+              },
+              "vertices": [
+                {
+                  "x": 876,
+                  "y": 273
+                }
+              ],
+              "id": "c9428bef-c017-430c-ba0f-c42a1d9879b2",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.45973611018608357,
+                    "offset": -0.613945898384611
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 22,
+              "hasOpenThreats": false,
+              "protocol": "HTTP/File",
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Preisegeben von Informationen an Dritte",
+                  "mitigation": "Verschlüsselung\n(Ablegen der Informationen in verschlüsselter Ramdisk)",
+                  "title": "Preisgeben von Informationen",
+                  "$$hashKey": "object:910"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "af108df3-e7e0-41bc-bb82-2d2214d3ed95"
+              },
+              "target": {
+                "id": "a3d112f9-6c74-4bda-91e2-0708660397de"
+              },
+              "vertices": [
+                {
+                  "x": 1075,
+                  "y": 264
+                }
+              ],
+              "id": "160b6976-b784-4d75-abe9-76fafe95ea1a",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.48974045499526114,
+                    "offset": 2.059064530187956
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 23,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Manipulation",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Manipulation der übermittelten Antwort",
+                  "mitigation": "Verschlüsselung der Übertragung (TLS)",
+                  "$$hashKey": "object:744"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Preisgeben von Infromationen",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Preisgeben von Informationen an unbefugte Dritte",
+                  "mitigation": "Rollen-basierte / Policy-basierte Authentifizierung",
+                  "$$hashKey": "object:753"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Verfügbarkeit",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Einschränkung der Verfügbarkeit",
+                  "mitigation": "Rate Limiting im Router (Traefik)",
+                  "$$hashKey": "object:762"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
         "size": {
-          "height": 590,
-          "width": 1206
+          "height": 5536,
+          "width": 1474
         },
         "$$hashKey": "object:11"
       }
