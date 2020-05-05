@@ -1062,9 +1062,9 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Preisegeben von Informationen an Dritte",
-                  "mitigation": "Verschlüsselung\n(Ablegen der Informationen in verschlüsselter Ramdisk)",
+                  "mitigation": "Verschlüsselung, Ablegen der Informationen in verschlüsselter Ramdisk, Isolation",
                   "title": "Preisgeben von Informationen",
-                  "$$hashKey": "object:910"
+                  "$$hashKey": "object:1068"
                 },
                 {
                   "status": "Mitigated",
@@ -1073,7 +1073,7 @@
                   "type": "Tampering",
                   "description": "Manipulation der übertragenen Informationen",
                   "mitigation": "Netzwerkisolation",
-                  "$$hashKey": "object:766"
+                  "$$hashKey": "object:1088"
                 }
               ],
               "attrs": {
@@ -1131,17 +1131,17 @@
                   "title": "Manipulation",
                   "type": "Tampering",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "Manipulation der übertragenen Informationen",
                   "mitigation": "Verschlüsselung der Übertragung (TLS)",
-                  "$$hashKey": "object:744"
+                  "$$hashKey": "object:1106"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
                   "title": "Preisgeben von Infromationen",
                   "type": "Information disclosure",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "Preisgeben von Informationen an unbefugte Dritte",
                   "mitigation": "Rollen-basierte / Policy-basierte Authentifizierung",
                   "$$hashKey": "object:754"
@@ -1579,23 +1579,33 @@
                 }
               ],
               "z": 29,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "description": "Manipulation der übertragenen Informationen",
                   "type": "Tampering",
                   "title": "Manipluation",
-                  "$$hashKey": "object:740"
+                  "$$hashKey": "object:1080",
+                  "mitigation": "Netzwerkisolation"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Preisgeben von Informationen",
+                  "mitigation": "Verschlüsselung, Ablegen der Informationen in verschlüsselter Ramdisk, Isolation",
+                  "$$hashKey": "object:1060",
+                  "description": "Preisegeben von Informationen an Dritte"
                 }
               ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
+                  "class": "marker-target hasNoOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             },
@@ -1686,25 +1696,26 @@
                 }
               ],
               "z": 31,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "threats": [
                 {
-                  "status": "Open",
-                  "severity": "Medium",
+                  "status": "Mitigated",
+                  "severity": "High",
                   "description": "Manipulation der übertragenen Informationen",
                   "type": "Tampering",
                   "title": "Manipluation",
-                  "$$hashKey": "object:746"
+                  "$$hashKey": "object:746",
+                  "mitigation": "Verschlüsselung der Übertragung (TLS)"
                 }
               ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
+                  "class": "marker-target hasNoOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             },
