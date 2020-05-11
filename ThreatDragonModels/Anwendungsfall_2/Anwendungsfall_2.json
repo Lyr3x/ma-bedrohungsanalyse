@@ -34,22 +34,64 @@
               "hasOpenThreats": false,
               "threats": [
                 {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Vortäuschung",
+                  "type": "Spoofing",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "type": "Elevation of privilege",
-                  "description": "Erlangung von DB Zugangsdaten",
-                  "title": "Zugangsdaten veröffentlicht",
-                  "$$hashKey": "object:159",
-                  "mitigation": "Kurzlebige Zugangsdaten\nAuditierung\nSchnelles Rotierungssystem"
+                  "description": "Unbefugte Manipulation von Daten",
+                  "mitigation": "Authentication (Basic-Auth + JWT)",
+                  "$$hashKey": "object:1431"
                 },
                 {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Manipulation",
+                  "type": "Tampering",
                   "status": "Mitigated",
                   "severity": "Medium",
+                  "description": "Manipulation der übertragenen Informationen",
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
+                  "$$hashKey": "object:1440"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Zurückweisung",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Zurückweisung von Aktivitäten",
+                  "mitigation": "Logging",
+                  "$$hashKey": "object:1449"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Presigeben von Informationen",
                   "type": "Information disclosure",
-                  "title": "Auslesen von Secrets",
-                  "description": "Unbeabsichtigtes auslesen von abgerufenen Secrets (z.B. Vault access token, Role-ID, Secret-ID)",
-                  "mitigation": "Ablegen der Secrets in Ramdisk\nLöschen der Secret-ID nach Lesevorgang\nEndpunkte nicht dynamisieren",
-                  "$$hashKey": "object:542"
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Preisgeben von Informationen an unbefugte Dritte (z. B. Kundendaten, Zugangsdaten, etc.)",
+                  "mitigation": "Verschlüsselung/Signatur (TLS),\nRollen-basierte / Policy-basiert Authentfizierung,\nZugangsbeschränkung,\nAblegen der Secrets in Ramdisk,\nLöschen der Secret-ID nach Lesevorgang,\nEndpunkte nicht dynamisieren (SQL)",
+                  "$$hashKey": "object:1458"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Verfügbarkeit",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Einschränkung der Dienstverfügbarkeit",
+                  "mitigation": "Einrichtung von Rate Limiting im Router (Traefik), Skalierung",
+                  "$$hashKey": "object:1467"
+                },
+                {
+                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
+                  "title": "Ausweiten von Berechtigungen",
+                  "type": "Elevation of privilege",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Ausweiten von Berechtigungen",
+                  "mitigation": "Validierung der Zugangsberechtigung",
+                  "$$hashKey": "object:1476"
                 }
               ],
               "attrs": {
@@ -72,7 +114,7 @@
               },
               "position": {
                 "x": 708,
-                "y": 417
+                "y": 409
               },
               "angle": 0,
               "id": "498b11fb-7a72-43ae-8ba7-14f7f500c542",
@@ -81,43 +123,43 @@
               "threats": [
                 {
                   "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
+                  "title": "Manipulation",
                   "type": "Tampering",
                   "status": "Mitigated",
                   "severity": "High",
-                  "description": "A generic tampering threat",
-                  "mitigation": "Rechtemodell und Verschlüsselung der gespeicherten Daten",
+                  "description": "Manipulation der übertragenen Informationen",
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
                   "$$hashKey": "object:122"
                 },
                 {
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
+                  "title": "Zurückweisung",
                   "type": "Repudiation",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "A generic repudiation threat",
+                  "description": "Zurückweisung von Aktivitäten",
                   "mitigation": "Logging",
-                  "$$hashKey": "object:123"
+                  "$$hashKey": "object:800"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
+                  "title": "Zurückweisung von Aktivitäten",
                   "type": "Information disclosure",
                   "status": "Mitigated",
                   "severity": "High",
-                  "description": "A generic information disclosure threat",
-                  "mitigation": "Verschlüsselung der Daten\nAuthentifizierung erforderlich",
+                  "description": "Preisgeben von Informationen an unbefugte Dritte (z. B. Kundendaten, Zugangsdaten, etc.)",
+                  "mitigation": "Verschlüsselung/Signatur (TLS), Authentfizierung",
                   "$$hashKey": "object:124"
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
+                  "title": "Verfügbarkeit",
                   "type": "Denial of service",
                   "status": "Mitigated",
-                  "severity": "Low",
-                  "description": "A generic DoS threat",
-                  "mitigation": "Datenbank nicht direkt öffentlich erreichbar. DDoS Angriff nur durch Innentäter möglich",
-                  "$$hashKey": "object:125"
+                  "severity": "Medium",
+                  "description": "Einschränkung der Dienstverfügbarkeit",
+                  "mitigation": "Einrichtung von Rate Limiting im Router (Traefik), Leistungsfähige Hardware",
+                  "$$hashKey": "object:806"
                 }
               ],
               "attrs": {
@@ -149,7 +191,7 @@
               "threats": [
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
-                  "title": "Manipulation",
+                  "title": "Vortäuschung",
                   "type": "Spoofing",
                   "status": "Mitigated",
                   "severity": "High",
@@ -162,19 +204,10 @@
                   "title": "Zurückweisung",
                   "type": "Repudiation",
                   "status": "Mitigated",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "description": "Zurückweisung von Aktivitäten",
                   "mitigation": "Logging",
-                  "$$hashKey": "object:824"
-                },
-                {
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "title": "(D)Dos",
-                  "description": "Einschränkung der Verfügbarkeit des Systems",
-                  "mitigation": "Rate Limiting im Router\n(In Produktion: Skalierbarkeit des Dienstes)",
-                  "$$hashKey": "object:579"
+                  "$$hashKey": "object:1774"
                 }
               ],
               "outOfScope": false,
@@ -211,28 +244,19 @@
                   "title": "Zurückweisung",
                   "type": "Repudiation",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "Nicht Anerkennung von vorgenommenen Änderungen.",
                   "mitigation": "Aktivierung des Audit-Logs und Erhebung von Telemetrie-Daten, Logging",
-                  "$$hashKey": "object:837"
+                  "$$hashKey": "object:2746"
                 },
                 {
                   "status": "Mitigated",
-                  "severity": "Low",
-                  "type": "Denial of service",
-                  "title": "Verfügbarkeit",
-                  "description": "Angriff auf die Verfügbarkeit des Systems.",
-                  "$$hashKey": "object:950",
-                  "mitigation": "Rate Limiting im Router (Traefik)"
-                },
-                {
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "title": "Manipulation",
-                  "description": "Unbefugte Manipulation von Informationen",
-                  "mitigation": "Authentifizierzung (Basic-Auth + JWT)\nTLS",
-                  "$$hashKey": "object:560"
+                  "severity": "High",
+                  "title": "Vortäuschung",
+                  "type": "Spoofing",
+                  "description": "Unbefugte Manipulation von Daten",
+                  "mitigation": "Authentication (Basic-Auth + JWT)",
+                  "$$hashKey": "object:1783"
                 }
               ],
               "attrs": {
@@ -446,9 +470,9 @@
                   "status": "Mitigated",
                   "severity": "High",
                   "type": "Denial of service",
-                  "title": "DoS",
+                  "title": "Verfügbarkeit",
                   "description": "Einschränkung der Dienstverfügbarkeit",
-                  "mitigation": "Einrichtung von Rate Limiting im Router (Traefik)",
+                  "mitigation": "Einrichtung von Rate Limiting im Router (Traefik), Skalierung",
                   "$$hashKey": "object:111"
                 },
                 {
@@ -456,8 +480,8 @@
                   "severity": "High",
                   "type": "Information disclosure",
                   "title": "Presigeben von Informationen",
-                  "description": "Veröffentlichung von Informationen",
-                  "mitigation": "Verschlüsselung/Signatur (TLS)",
+                  "description": "Preisgeben von Informationen an unbefugte Dritte (z. B. Kundendaten, Zugangsdaten, etc.)",
+                  "mitigation": "Verschlüsselung/Signatur (TLS), Rollen-basierte / Policy-basiert Authentfizierung",
                   "$$hashKey": "object:127"
                 },
                 {
@@ -467,7 +491,7 @@
                   "title": "Manipulation",
                   "description": "Manipulation der übertragenen Informationen",
                   "mitigation": "Verschlüsselung/Signatur (TLS)",
-                  "$$hashKey": "object:163"
+                  "$$hashKey": "object:3826"
                 }
               ],
               "attrs": {
@@ -522,9 +546,9 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "title": "Preisgeben von Informationen",
-                  "description": "Unbeabsichtigte veröffentlichung von Informationen",
-                  "mitigation": "Verschlüsselung/Signatur (TLS)",
-                  "$$hashKey": "object:51"
+                  "description": "Preisgeben von Informationen an unbefugte Dritte (z. B. Kundendaten, Zugangsdaten, etc.)",
+                  "mitigation": "Verschlüsselung/Signatur (TLS), Authentfizierung",
+                  "$$hashKey": "object:3958"
                 },
                 {
                   "status": "Mitigated",
@@ -532,8 +556,8 @@
                   "type": "Tampering",
                   "description": "Manipulation der übertragenen Informationen",
                   "title": "Manipulation",
-                  "mitigation": "Verschlüsselung/Signatur (TLS)",
-                  "$$hashKey": "object:232"
+                  "mitigation": "Verschlüsselung/Signatur (TLS), Authentfizierung,",
+                  "$$hashKey": "object:3834"
                 }
               ],
               "attrs": {
@@ -613,12 +637,74 @@
               },
               "position": {
                 "x": 931,
-                "y": 203
+                "y": 202
               },
               "angle": 0,
               "id": "a3d112f9-6c74-4bda-91e2-0708660397de",
               "z": 16,
               "hasOpenThreats": false,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Manipulation Der Kommunikation",
+                  "type": "Spoofing",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Vortäuschen einer anderen Identität",
+                  "$$hashKey": "object:162",
+                  "mitigation": "Authentifizierung"
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Manipulation von Daten",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Manipulation von Daten",
+                  "$$hashKey": "object:171",
+                  "mitigation": "Authentifizierung\nEingeschränkte Rechte\nSignierung\nVerschlüsselung"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Zurückweisung",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Zurückweisung von Aktivitäten",
+                  "$$hashKey": "object:180",
+                  "mitigation": "Vault Audit Log"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Preisgeben von Informationen",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Preisgeben von Informationen",
+                  "mitigation": "Ablegen von Informationen in verschlüsselte Ramdisk oder keine Persisitierung\nIsolierung",
+                  "$$hashKey": "object:950"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Verfügbarkeit",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "Verfügbarkeit der Systeme",
+                  "mitigation": "Rate Limiting im Router (Traefik)",
+                  "$$hashKey": "object:1014"
+                },
+                {
+                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
+                  "title": "Ausdehnung der Berechtigungen",
+                  "type": "Elevation of privilege",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Ausdehnung der Berechtigungen",
+                  "$$hashKey": "object:207",
+                  "mitigation": "Feste Role-ID mit dynamischer Secret-ID\nRollen-Basierte bzw. Policy-Basierte Authentifizerung"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -676,7 +762,7 @@
                   "type": "Tampering",
                   "status": "Mitigated",
                   "severity": "High",
-                  "description": "Manipulation von übertragenen Daten",
+                  "description": "Manipulation der übertragenen Informationen",
                   "$$hashKey": "object:616",
                   "mitigation": "* Signatur/MAC\n* Durch Vault Threat Model behandelt"
                 },
@@ -747,7 +833,7 @@
                   "type": "Tampering",
                   "status": "Mitigated",
                   "severity": "High",
-                  "description": "Manipulation der Anfrage",
+                  "description": "Manipulation der übertragenen Informationen",
                   "mitigation": "* Signatur/MAC\n* Durch Vault Threat Model behandelt\n* Verschlüsselung/Signatur (TLS)",
                   "$$hashKey": "object:662"
                 },
@@ -922,8 +1008,8 @@
                   "type": "Tampering",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "Manipulation der Übertragung",
-                  "mitigation": "TLS",
+                  "description": "Manipulation der übertragenen Informationen",
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
                   "$$hashKey": "object:830"
                 },
                 {
@@ -932,8 +1018,8 @@
                   "type": "Information disclosure",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "Preisgeben von Informationen an Dritte",
-                  "mitigation": "Verschlüsselung der Übertragung (TLS)",
+                  "description": "Preisgeben von Informationen an unbefugte Dritte (z. B. Kundendaten, Zugangsdaten, etc.)",
+                  "mitigation": "Verschlüsselung/Signatur (TLS), Authentfizierung",
                   "$$hashKey": "object:839"
                 },
                 {
@@ -941,10 +1027,10 @@
                   "title": "Verfügbarkeit",
                   "type": "Denial of service",
                   "status": "Mitigated",
-                  "severity": "Low",
-                  "description": "Einschränkung der Verfügbarkeit",
-                  "mitigation": "Rate Limiting im Router (Traefik)",
-                  "$$hashKey": "object:574"
+                  "severity": "Medium",
+                  "description": "Einschränkung der Dienstverfügbarkeit",
+                  "mitigation": "Einrichtung von Rate Limiting im Router (Traefik)",
+                  "$$hashKey": "object:3041"
                 }
               ],
               "attrs": {
@@ -997,21 +1083,21 @@
               "threats": [
                 {
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Information disclosure",
                   "description": "Preisegeben von Informationen an Dritte",
-                  "mitigation": "Verschlüsselung\n(Ablegen der Informationen in verschlüsselter Ramdisk)",
+                  "mitigation": "Verschlüsselung, Ablegen der Informationen in verschlüsselter Ramdisk, Isolation",
                   "title": "Preisgeben von Informationen",
-                  "$$hashKey": "object:910"
+                  "$$hashKey": "object:2588"
                 },
                 {
                   "status": "Mitigated",
-                  "severity": "Low",
+                  "severity": "High",
                   "title": "Manipulation",
                   "type": "Tampering",
-                  "$$hashKey": "object:283",
-                  "description": "Manipulation der Antwort",
-                  "mitigation": "Netzwerkisolation"
+                  "description": "Manipulation der übertragenen Informationen",
+                  "mitigation": "Signatur/MAC, durch Vault Threat Model behandelt,\nIsolation",
+                  "$$hashKey": "object:1088"
                 }
               ],
               "attrs": {
@@ -1069,20 +1155,20 @@
                   "title": "Manipulation",
                   "type": "Tampering",
                   "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "Manipulation der übermittelten Antwort",
+                  "severity": "High",
+                  "description": "Manipulation der übertragenen Informationen",
                   "mitigation": "Verschlüsselung der Übertragung (TLS)",
-                  "$$hashKey": "object:744"
+                  "$$hashKey": "object:2630"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
                   "title": "Preisgeben von Infromationen",
                   "type": "Information disclosure",
                   "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "Preisgeben von Informationen an unbefugte Dritte",
-                  "mitigation": "Rollen-basierte / Policy-basierte Authentifizierung",
-                  "$$hashKey": "object:753"
+                  "severity": "High",
+                  "description": "Preisgeben von Informationen an unbefugte Dritte (z. B. Kundendaten, Zugangsdaten, etc.)",
+                  "mitigation": "Verschlüsselung/Signatur (TLS), Rollen-basierte / Policy-basierte Authentifizierung",
+                  "$$hashKey": "object:2610"
                 }
               ],
               "attrs": {
@@ -1149,7 +1235,7 @@
                   "status": "Mitigated",
                   "severity": "High",
                   "description": "Veröffentlichung von Informationen an Dritte",
-                  "mitigation": "Verschlüsselung/Signatur (TLS)",
+                  "mitigation": "Verschlüsselung/Signatur (TLS), Authentfizierung",
                   "$$hashKey": "object:251"
                 },
                 {
@@ -1157,7 +1243,7 @@
                   "title": "Verfügbarkeit",
                   "type": "Denial of service",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "Einschränkung der Verfügbarkeit",
                   "mitigation": "Einrichtung von Rate Limiting im Router (Traefik)",
                   "$$hashKey": "object:176"
@@ -1217,8 +1303,8 @@
                   "status": "Mitigated",
                   "severity": "High",
                   "description": "Manipulation der übertragenen Informationen",
-                  "$$hashKey": "object:79",
-                  "mitigation": "Verschlüsselung/Signatur (TLS)"
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
+                  "$$hashKey": "object:774"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
@@ -1226,9 +1312,9 @@
                   "type": "Information disclosure",
                   "status": "Mitigated",
                   "severity": "High",
-                  "description": "Veröffentlichung von Informationen an Dritte",
-                  "$$hashKey": "object:88",
-                  "mitigation": "Verschlüsselung/Signatur (TLS)"
+                  "description": "Preisgeben von Informationen an unbefugte Dritte (z. B. Kundendaten, Zugangsdaten, etc.)",
+                  "mitigation": "Verschlüsselung/Signatur (TLS)",
+                  "$$hashKey": "object:1561"
                 }
               ],
               "attrs": {
